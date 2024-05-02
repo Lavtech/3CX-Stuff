@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+<Crm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Country="US" Name="SyncroMSP" Version="1" SupportsEmojis="true">
+  <Number Prefix="AsIs" MaxLength="[MaxLength]" />
+  <Connection MaxConcurrentRequests="2" />
+  <Parameters>
+    <Parameter Name="APIkey" Type="String" Parent="General Configuration" Editor="String" Title="API Key:" />
+  </Parameters>
+  <Authentication Type="Basic">
+    <Value>[APIkey]:X</Value>
+  </Authentication>
+  <Scenarios>
+    <Scenario Id="" Type="REST">
+      <Request Url="https://lavtech.syncromsp.com/api/v1/customers?query=[Number]" MessagePasses="0" RequestEncoding="UrlEncoded" RequestType="Get" ResponseType="Json" />
+      <Rules>
+        <Rule Type="Any">customers.id</Rule>
+      </Rules>
+      <Variables>
+        <Variable Name="ContactID" Path="customers.id">
+          <Filter />
+        </Variable>
+        <Variable Name="FirstName" Path="customers.firstname">
+          <Filter />
+        </Variable>
+        <Variable Name="LastName" Path="customers.lastname">
+          <Filter />
+        </Variable>
+        <Variable Name="CompanyName" Path="customers.business_name">
+          <Filter />
+        </Variable>
+        <Variable Name="Email" Path="customers.email">
+          <Filter />
+        </Variable>
+        <Variable Name="PhoneBusiness" Path="customers.phone">
+          <Filter />
+        </Variable>
+        <Variable Name="PhoneMobile" Path="customers.mobile">
+          <Filter />
+        </Variable>
+      </Variables>
+      <Outputs AllowEmpty="false">
+        <Output Type="ContactID" Passes="0" Value="[ContactID]" />
+        <Output Type="FirstName" Passes="0" Value="[FirstName]" />
+        <Output Type="LastName" Passes="0" Value="[LastName]" />
+        <Output Type="CompanyName" Passes="0" Value="[CompanyName]" />
+        <Output Type="Email" Passes="0" Value="[Email]" />
+        <Output Type="PhoneBusiness" Passes="0" Value="[PhoneBusiness]" />
+        <Output Type="PhoneMobile" Passes="0" Value="[PhoneMobile]" />
+        <Output Type="ContactUrl" Passes="0" Value="https://lavtech.syncromsp.com/api/v1/customers?id=[customer.id]" />
+        <Output Type="EntityId" Passes="0" Value="[ContactID]" />
+        <Output Type="EntityType" Passes="0" Value="Contacts" />
+      </Outputs>
+    </Scenario>
+    <Scenario Id="LookupByEmail" Type="REST">
+      <Request Url="https://lavtech.syncromsp.com/api/v1/customers?email=[Email]" MessagePasses="0" RequestEncoding="UrlEncoded" RequestType="Get" ResponseType="Json" />
+      <Rules>
+        <Rule Type="Any">customers.id</Rule>
+      </Rules>
+      <Variables>
+        <Variable Name="ContactID" Path="customers.id">
+          <Filter />
+        </Variable>
+        <Variable Name="FirstName" Path="customers.firstname">
+          <Filter />
+        </Variable>
+        <Variable Name="LastName" Path="customers.lastname">
+          <Filter />
+        </Variable>
+        <Variable Name="CompanyName" Path="customers.business_name">
+          <Filter />
+        </Variable>
+        <Variable Name="Email" Path="customers.email">
+          <Filter />
+        </Variable>
+        <Variable Name="PhoneBusiness" Path="customers.phone">
+          <Filter />
+        </Variable>
+        <Variable Name="PhoneMobile" Path="customers.mobile">
+          <Filter />
+        </Variable>
+      </Variables>
+      <Outputs AllowEmpty="false">
+        <Output Type="ContactID" Passes="0" Value="[ContactID]" />
+        <Output Type="FirstName" Passes="0" Value="[FirstName]" />
+        <Output Type="LastName" Passes="0" Value="[LastName]" />
+        <Output Type="CompanyName" Passes="0" Value="[CompanyName]" />
+        <Output Type="Email" Passes="0" Value="[Email]" />
+        <Output Type="PhoneBusiness" Passes="0" Value="[PhoneBusiness]" />
+        <Output Type="PhoneMobile" Passes="0" Value="[PhoneMobile]" />
+        <Output Type="ContactUrl" Passes="0" Value="https://lavtech.syncromsp.com/api/v1/customers?id=[customer.id]" />
+        <Output Type="EntityId" Passes="0" Value="[ContactID]" />
+        <Output Type="EntityType" Passes="0" Value="Contacts" />
+      </Outputs>
+    </Scenario>
+  </Scenarios>
+</Crm>

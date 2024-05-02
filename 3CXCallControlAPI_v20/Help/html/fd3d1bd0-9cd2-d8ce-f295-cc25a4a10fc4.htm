@@ -1,0 +1,152 @@
+﻿<!DOCTYPE html ><html lang="en-US"><head><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><link rel="shortcut icon" href="../icons/favicon.ico" /><link rel="stylesheet" href="../css/bulma.css" /><link rel="stylesheet" href="../css/font-awesome.min.css" /><link rel="stylesheet" href="../css/presentationStyle.css" /><link rel="stylesheet" href="../css/vs.min.css" /><script src="../scripts/jquery-3.5.1.min.js"></script><script src="../scripts/clipboard.min.js"></script><script src="../scripts/highlight.min.js"></script><script src="../scripts/presentationStyle.js"></script><title>VoipProvider Interface</title><meta name="Title" content="VoipProvider" /><meta name="Help.Id" content="T:TCX.Configuration.VoipProvider" /><meta name="Help.ContentType" content="Reference" /><meta name="container" content="TCX.Configuration" /><meta name="guid" content="fd3d1bd0-9cd2-d8ce-f295-cc25a4a10fc4" /><meta name="Description" content="Extended interface for VoIP Provider objects" /><meta name="tocFile" content="../toc/IDBA.xml" /></head><body><div class="fixedLayout"><div id="Header" class="fixedHeader"><div class="pageHeader level mb-0 py-2 px-4"><div id="TitleContainer" class="level-left"><div id="DocumentationTitle" class="level-item">3CX Configuration and Call Control API v4.0.0.0 (v20)</div></div><div id="LangFilterSearchContainer" class="level-right"><div class="level-item"><div class="dropdown is-hoverable"><div class="dropdown-trigger"><button class="button" aria-haspopup="true" aria-controls="dropdown-menu"><span id="CurrentLanguage"></span><span class="icon is-small"><i class="fa fa-angle-down" aria-hidden="true"></i></span></button></div><div class="dropdown-menu" role="menu"><div id="LanguageSelections" class="dropdown-content"><a class="dropdown-item languageFilterItem" data-languageId="cs">C#</a></div></div></div></div><div class="level-item"><form id="SearchForm" action="#" onsubmit="TransferToSearchPage(); return false;"><div class="field"><div class="control has-icons-left"><input id="SearchTerms" class="input" type="text" maxlength="200" placeholder="Search" /><span class="icon is-small is-left"><i class="fa fa-search"></i></span><button id="SearchButton" type="submit" class="is-hidden"></button></div></div></form></div></div></div></div><div class="fixedContent"><nav class="breadcrumb my-1 px-2 border-bottom" role="navigation"><ul id="TopicBreadcrumbs" /></nav><div id="ContentContainer" class="columns pl-5 pr-5 fixedContent"><div id="ShowHideTOCColumn" class="column is-hidden-tablet"><a id="ShowHideTOC">Show/Hide TOC</a></div><div id="TOCColumn" class="column is-hidden-mobile"><nav class="toc"><ul id="TableOfContents" class="toc-menu" /></nav></div><div id="Resizer" class="is-hidden"></div><div id="TopicContent" class="column content is-7"><h1>Voip<wbr />Provider Interface</h1><div class="summary">
+            Extended <a href="81741c84-f171-33af-25d7-a5873b1fa7f9.htm">Gateway</a> interface for VoIP Provider objects
+            </div><h2 class="quickLinkHeader"><span class="icon toggleSection" tabindex="0"><i class="fa fa-angle-down"></i></span>Definition</h2><div id="IDBSection"><strong>Namespace:</strong> <a href="0742b1c1-2ceb-e24b-1bea-b8e461055593.htm">TCX.Configuration</a><br /><strong>Assembly:</strong> 3cxpscomcpp2 (in 3cxpscomcpp2.dll) Version: 20.0.1<div class="codeSnippet"><div class="codeHeader"><span class="codeHeaderTitle">C#</span><span class="buttons"><button class="button is-small is-light copyCode" title="Copy"><span class="icon is-small"><i class="fa fa-copy"></i></span><span>Copy</span></button></span></div><div class="codePanel hljs"><pre xml:space="preserve"><code class="language-cs"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="identifier">VoipProvider</span> : <span class="identifier">Gateway</span>, 
+	<span class="identifier">IOMStorable</span>, <span class="identifier">IOMRemovable</span>, <span class="identifier">IOMSnapshot</span>, <span class="identifier">IEquatable</span>&lt;<span class="identifier">Object</span>&gt;, 
+	<span class="identifier">IDisposable</span></code></pre></div></div><dl class="implementsList"><dt>Implements</dt><dd><span class="noLink">IDisposable</span>, <span class="noLink">IEquatable</span><span id="LSTE6D1B568_0" data-languageSpecificText="cpp=&lt;|cs=&lt;|fs=&lt;|vb=(Of |nu=("></span><span class="noLink">Object</span><span id="LSTE6D1B568_1" data-languageSpecificText="cpp=&gt;|cs=&gt;|fs=&gt;|vb=)|nu=)"></span>, <a href="81741c84-f171-33af-25d7-a5873b1fa7f9.htm">Gateway</a>, <a href="a226e435-a02c-3fd6-a17d-9ec2cde4a420.htm">IOMRemovable</a>, <a href="e0c382bb-4715-bec1-02cd-a43bcc3ebe05.htm">IOMSnapshot</a>, <a href="9a8ef92f-638a-7ddc-e913-801838f2249c.htm">IOMStorable</a></dd></dl></div><h2 class="quickLinkHeader"><span class="icon toggleSection" tabindex="0"><i class="fa fa-angle-down"></i></span>Properties</h2><div id="IDSEASection"><table id="PropertyList" class="table is-hoverable"><tr><td><a href="ac7960c2-6f37-cb14-4344-391d20cae63a.htm">AuthID</a></td><td>
+            Authorization ID.
+            <br /><span class="tag is-danger">Obsolete.</span></td></tr><tr><td><a href="28ac41e3-8bc8-eb90-0177-fa1cbfdd8d01.htm">AuthPassword</a></td><td>
+            Authorization password.
+            <br /><span class="tag is-danger">Obsolete.</span></td></tr><tr><td><a href="7581d944-6676-e7c6-7aed-41208ca2ceba.htm">Codecs</a></td><td>
+            The collection of codecs required for this gateway.
+            <br />(Inherited from <a href="81741c84-f171-33af-25d7-a5873b1fa7f9.htm">Gateway</a>)</td></tr><tr><td><a href="0fb9b4d8-f83d-92e8-6459-5a27ade089fc.htm">DeliverAudio</a></td><td>
+            Specifies whether PBX should deliver audio for this gateway.
+            <br />(Inherited from <a href="81741c84-f171-33af-25d7-a5873b1fa7f9.htm">Gateway</a>)</td></tr><tr><td><a href="072fa3dc-c18e-613c-c136-af08ee326422.htm">DestNumberInRemotePartyIDCalled</a></td><td>
+            Whether destination number should be in the 'RemotePartyID;party=called' SIP header field.
+            <br />(Inherited from <a href="81741c84-f171-33af-25d7-a5873b1fa7f9.htm">Gateway</a>)</td></tr><tr><td><a href="685db2c5-14e6-2d8c-1121-150eb4c7fb99.htm">DestNumberInRequestLineURI</a></td><td>
+            Whether destination number should be in the 'Request-Line-URI' SIP header field.
+            <br />(Inherited from <a href="81741c84-f171-33af-25d7-a5873b1fa7f9.htm">Gateway</a>)</td></tr><tr><td><a href="61de8e1d-9f3f-aa5b-2dee-ad7d044ae598.htm">DestNumberInTo</a></td><td>
+            Whether destination number should be in the 'To.user' SIP header field.
+            <br />(Inherited from <a href="81741c84-f171-33af-25d7-a5873b1fa7f9.htm">Gateway</a>)</td></tr><tr><td><a href="97f5d486-6411-4421-3651-9c23a8d15f22.htm">EnableSRTP</a></td><td>
+            Controls whether the PABX Media Server should accept/propose secure RTP media stream
+            from/to this gateway (provider).
+            <br />(Inherited from <a href="81741c84-f171-33af-25d7-a5873b1fa7f9.htm">Gateway</a>)<br /><span class="tag is-danger">Obsolete.</span></td></tr><tr><td><a href="065934ad-2f6f-f3ba-8449-4e1b4f199811.htm">HasAttached</a></td><td>
+            Indicates that the object has attached data for saving transaction
+            <br />(Inherited from <a href="e0c382bb-4715-bec1-02cd-a43bcc3ebe05.htm">IOMSnapshot</a>)</td></tr><tr><td><a href="6f6a5e75-45ee-83d3-656a-088fc9966776.htm">Host</a></td><td>
+            Gateway host.
+            <br />(Inherited from <a href="81741c84-f171-33af-25d7-a5873b1fa7f9.htm">Gateway</a>)</td></tr><tr><td><a href="6a8b7892-e555-f591-2969-5c719dfd54db.htm">ID</a></td><td>
+            each object has unique ID.
+            It is the same as the value returned by GetHashCode. (legacy)
+            new object has ID=0. After successful call to save snapshot gets persistent ID.
+            <br />(Inherited from <a href="e0c382bb-4715-bec1-02cd-a43bcc3ebe05.htm">IOMSnapshot</a>)</td></tr><tr><td><a href="38eec998-1626-a715-c92f-07ed6fc8d208.htm">InboundParams</a></td><td>
+            Advanced Inbound Gateway parameters to configure which SIP message fields
+            will contain which information.
+            <br />(Inherited from <a href="81741c84-f171-33af-25d7-a5873b1fa7f9.htm">Gateway</a>)</td></tr><tr><td><a href="84357bf1-0fc4-e649-47c0-0253c4e6b0fd.htm">Internal</a></td><td>
+            Specifies whether gateway is internal.
+            <br />(Inherited from <a href="81741c84-f171-33af-25d7-a5873b1fa7f9.htm">Gateway</a>)</td></tr><tr><td><a href="fcef1f5e-207d-c7c8-23a9-17cb03c55426.htm">IPInRegistrationContact</a></td><td>
+            Identifies the type of IP in contact
+            </td></tr><tr><td><a href="87d549c8-e420-4d09-b317-1abcab358dad.htm">Lines</a></td><td>
+            Number of ports on this gateway.
+            <br />(Inherited from <a href="81741c84-f171-33af-25d7-a5873b1fa7f9.htm">Gateway</a>)</td></tr><tr><td><a href="c7e476d1-49c0-250c-529c-a551bb1f27f3.htm">MatchingStrategy</a></td><td>
+            Which matching strategy to use to identify incoming calls from this provider.
+            <br />(Inherited from <a href="81741c84-f171-33af-25d7-a5873b1fa7f9.htm">Gateway</a>)</td></tr><tr><td><a href="3b9c3bb8-1b10-b0ce-d13d-8ee8115e3370.htm">Name</a></td><td>
+            The user-assigned name for this gateway.
+            <br />(Inherited from <a href="81741c84-f171-33af-25d7-a5873b1fa7f9.htm">Gateway</a>)</td></tr><tr><td><a href="1c143c03-cfc3-e245-733f-fdc91da59156.htm">OutboundCallerID</a></td><td>
+            The Outbound Caller ID for this gateway.
+            <br />(Inherited from <a href="81741c84-f171-33af-25d7-a5873b1fa7f9.htm">Gateway</a>)</td></tr><tr><td><a href="838e367c-7f49-b261-254c-dae157c9a956.htm">OutboundParams</a></td><td>
+            Advanced Outbound Gateway parameters to configure which SIP message fields
+            will contain which information.
+            <br />(Inherited from <a href="81741c84-f171-33af-25d7-a5873b1fa7f9.htm">Gateway</a>)</td></tr><tr><td><a href="f3b1a429-ada1-bb4d-6d10-0d59f1055b54.htm">Port</a></td><td>
+            Gateway port number.
+            <br />(Inherited from <a href="81741c84-f171-33af-25d7-a5873b1fa7f9.htm">Gateway</a>)</td></tr><tr><td><a href="2e70fe96-5759-54ed-ff2d-f30b0d5230a1.htm">ProxyHost</a></td><td>
+            Proxy host name.
+            </td></tr><tr><td><a href="56c2bf54-ce8b-c94a-1a4c-f7d54ebe19c5.htm">ProxyPort</a></td><td>
+            Proxy port number.
+            </td></tr><tr><td><a href="d2c389a9-7322-e159-7e60-873913a7be8c.htm">RequireRegistrationFor</a></td><td>
+            Identifies whether this gateway requires registration, and if it does,
+            on which direction of calls.
+            <br />(Inherited from <a href="81741c84-f171-33af-25d7-a5873b1fa7f9.htm">Gateway</a>)</td></tr><tr><td><a href="4cfb3333-0995-8ee3-787f-115eb99703b4.htm">SIPFieldWithDID</a></td><td>
+            Identifies which SIP field contains the DID number of an incoming call.
+            May be <span class="keyword"><span id="LSTE6D1B568_2" data-languageSpecificText="cpp=nullptr|vb=Nothing|nu=null"></span></span>.
+            </td></tr><tr><td><a href="d695b06e-4291-e23e-54cd-eb9d47202c09.htm">SourceIdentification</a></td><td>
+            Returns the set of SIP Fields and their values used to identify incoming calls
+            from this provider.
+            <br />(Inherited from <a href="81741c84-f171-33af-25d7-a5873b1fa7f9.htm">Gateway</a>)</td></tr><tr><td><a href="80eb3fb2-b9f6-934c-81e1-d54071bc3e24.htm">SpecifiedIPForRegistrationContact</a></td><td>
+            IP which is specific for this VoIP provider
+            </td></tr><tr><td><a href="f70533f4-e2ed-3844-833e-bc2bcf0797c9.htm">SRTPMode</a></td><td>
+            Supersedes <a href="97f5d486-6411-4421-3651-9c23a8d15f22.htm">EnableSRTP</a>. Allows to set optional and mandatory usage of SRTP
+            <br />(Inherited from <a href="81741c84-f171-33af-25d7-a5873b1fa7f9.htm">Gateway</a>)</td></tr><tr><td><a href="369e9976-54ee-b12f-1845-307e4acc96b6.htm">StunServerHost</a></td><td>
+            STUN Server Hostname.
+            </td></tr><tr><td><a href="83cc3f15-f951-fefb-5d01-9a2d4801b18d.htm">StunServerPort</a></td><td>
+            STUN Server port number.
+            </td></tr><tr><td><a href="3c5e8dc1-6e09-d28a-69f6-1b9f4fec4c56.htm">SupportReinvite</a></td><td>
+            Allows SIP server to use Reinvite procedures with the gateway.
+            if set to <span class="keyword"><span id="LSTE6D1B568_3" data-languageSpecificText="vb=False|nu=false"></span></span>, SIP server will not use Reinvite with the device after call is established.
+            <br />(Inherited from <a href="81741c84-f171-33af-25d7-a5873b1fa7f9.htm">Gateway</a>)</td></tr><tr><td><a href="730f3bd6-1a0e-1a5f-a45d-d8022c9ef2e2.htm">SupportReplaces</a></td><td>
+            Allows SIP server to use 'Replaces' header when communicating with this Gateway.
+            If set to <span class="keyword"><span id="LSTE6D1B568_4" data-languageSpecificText="vb=False|nu=false"></span></span>, SIP server will apply SIP procedures which are not using SIP 'Replaces' header
+            <br />(Inherited from <a href="81741c84-f171-33af-25d7-a5873b1fa7f9.htm">Gateway</a>)</td></tr><tr><td><a href="c2968008-0acf-eae3-c106-1b66bf354811.htm">TemplateFilename</a></td><td>
+            The filename representing the template for this gateway.
+            <br />(Inherited from <a href="81741c84-f171-33af-25d7-a5873b1fa7f9.htm">Gateway</a>)</td></tr><tr><td><a href="de76b69e-d6a8-2f16-ce44-3a9e509af83b.htm">TimeBetweenReg</a></td><td>
+            Time between registrations in seconds.
+            </td></tr><tr><td><a href="ae700686-66b8-ec2c-b1bd-db6f3196d856.htm">Type</a></td><td>
+            Identifies the type of the gateway.
+            <br />(Inherited from <a href="81741c84-f171-33af-25d7-a5873b1fa7f9.htm">Gateway</a>)</td></tr><tr><td><a href="36d97f7a-a64e-1740-3ab3-18e249fb1980.htm">UseIPInContact</a></td><td>
+            Identifies whether the option "Use registration's 'Contact' field host/port instead host/port specified in configuration"
+            is checked or not.
+            <br />(Inherited from <a href="81741c84-f171-33af-25d7-a5873b1fa7f9.htm">Gateway</a>)</td></tr><tr><td><a href="cbe0d114-8c91-a2a8-a6df-cdc9bc006725.htm">VariableChoices</a></td><td>
+            A map that stores custom variable choices for the gateway (depends on
+            the template file associated with the gateway).
+            <br />(Inherited from <a href="81741c84-f171-33af-25d7-a5873b1fa7f9.htm">Gateway</a>)</td></tr></table></div><h2 class="quickLinkHeader"><span class="icon toggleSection" tabindex="0"><i class="fa fa-angle-down"></i></span>Methods</h2><div id="IDIEASection"><table id="MethodList" class="table is-hoverable"><tr><td><a href="56df93cd-a98b-787f-8c4f-073e7189fe5e.htm">AttachOnSave(IEnumerable<span id="LSTE6D1B568_5" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>IOMSnapshot<span id="LSTE6D1B568_6" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span>)</a></td><td>
+            This method allows to add other object updates to the main object saving transaction
+            <br />(Inherited from <a href="e0c382bb-4715-bec1-02cd-a43bcc3ebe05.htm">IOMSnapshot</a>)</td></tr><tr><td><a href="ba52f8e7-ed2a-701f-f44e-329e940f2b66.htm">AttachOnSave(<span id="LSTE6D1B568_7" data-languageSpecificText="cpp=array&lt;"></span>IOMSnapshot<span id="LSTE6D1B568_8" data-languageSpecificText="cpp=&gt;|cs=[]|vb=()|nu=[]|fs=[]"></span>)</a></td><td>
+            This method allows to add other object updates to the saving transaction of main object
+            <br />(Inherited from <a href="e0c382bb-4715-bec1-02cd-a43bcc3ebe05.htm">IOMSnapshot</a>)</td></tr><tr><td><a href="05482778-0eb4-a3b1-b13a-a0fc218774aa.htm">Clone</a></td><td>
+            Makes fresh snapshot of the object without modifications
+            <br />(Inherited from <a href="e0c382bb-4715-bec1-02cd-a43bcc3ebe05.htm">IOMSnapshot</a>)</td></tr><tr><td><a href="1ec90b51-69be-576d-3df4-e9bdc3979516.htm">CreateGatewayParameterBinding<span id="LSTE6D1B568_9" data-languageSpecificText="cs=()|vb=|cpp=()|nu=()|fs=()"></span></a></td><td>
+            Creates a new instance of <a href="7cd9765a-a1fb-041e-6ff3-410d30f6818d.htm">GatewayParameterBinding</a> to be
+            added to <a href="d695b06e-4291-e23e-54cd-eb9d47202c09.htm">SourceIdentification</a>, <a href="38eec998-1626-a715-c92f-07ed6fc8d208.htm">InboundParams</a> or
+            <a href="838e367c-7f49-b261-254c-dae157c9a956.htm">OutboundParams</a>.
+            <br />(Inherited from <a href="81741c84-f171-33af-25d7-a5873b1fa7f9.htm">Gateway</a>)</td></tr><tr><td><a href="c7fa1335-c416-da89-9799-5e5920104518.htm">CreateGatewayParameterBinding(GatewayParameter, GatewayParameterValue, String)</a></td><td>
+            Creates initilized instance of <a href="7cd9765a-a1fb-041e-6ff3-410d30f6818d.htm">GatewayParameterBinding</a><br />(Inherited from <a href="81741c84-f171-33af-25d7-a5873b1fa7f9.htm">Gateway</a>)</td></tr><tr><td><a href="bd75f75f-1190-33fe-f61d-2f4d29850299.htm">Delete</a></td><td>
+            Delete object from configuration database.
+            <br />(Inherited from <a href="a226e435-a02c-3fd6-a17d-9ec2cde4a420.htm">IOMRemovable</a>)</td></tr><tr><td><a href="898e1e2e-3798-b181-508a-e9cce57a9218.htm">DeleteOnSave(IEnumerable<span id="LSTE6D1B568_10" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>IOMSnapshot<span id="LSTE6D1B568_11" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span>)</a></td><td>
+            Allows to remove other objects as a part of the main object saving transaction.
+            <br />(Inherited from <a href="e0c382bb-4715-bec1-02cd-a43bcc3ebe05.htm">IOMSnapshot</a>)</td></tr><tr><td><a href="19006aa0-7409-4f7d-a876-43d90de0d7a5.htm">DeleteOnSave(<span id="LSTE6D1B568_12" data-languageSpecificText="cpp=array&lt;"></span>IOMSnapshot<span id="LSTE6D1B568_13" data-languageSpecificText="cpp=&gt;|cs=[]|vb=()|nu=[]|fs=[]"></span>)</a></td><td>
+            Allows to remove other objects as a part of the main object saving transaction.
+            <br />(Inherited from <a href="e0c382bb-4715-bec1-02cd-a43bcc3ebe05.htm">IOMSnapshot</a>)</td></tr><tr><td><a href="16444e20-18de-548d-663a-ace8143b0710.htm">GetExternalLines</a></td><td>
+            The lines associated with this gateway. The lines may belong to different tenants.
+            <br />(Inherited from <a href="81741c84-f171-33af-25d7-a5873b1fa7f9.htm">Gateway</a>)</td></tr><tr><td><a href="bb64c832-b016-99ac-1847-6de26550025e.htm">GetHashCode</a></td><td>
+            Hash code is "record" identifier. So all snapshots of the object has the same hash.
+            <br />(Inherited from <a href="e0c382bb-4715-bec1-02cd-a43bcc3ebe05.htm">IOMSnapshot</a>)</td></tr><tr><td><a href="d8ee2964-bc2a-5cec-e42d-841c85196fa6.htm">GetOutboundRules</a></td><td>
+            The outbound rules associated with this gateway. The lines may belong to different
+            tenants.
+            <br />(Inherited from <a href="81741c84-f171-33af-25d7-a5873b1fa7f9.htm">Gateway</a>)</td></tr><tr><td><a href="706b34ce-9864-a7be-04ad-075fa889c246.htm">Refresh</a></td><td>
+            Reverts all modifications (if any) and reloads object from configuration/realtime storage
+            <br />(Inherited from <a href="9a8ef92f-638a-7ddc-e913-801838f2249c.htm">IOMStorable</a>)</td></tr><tr><td><a href="3223153b-5ae0-bf41-26a3-46fed16dee2e.htm">Save</a></td><td>
+            Commits the changes. This method inserts new or update existing object in persistent storage.
+            <br />(Inherited from <a href="9a8ef92f-638a-7ddc-e913-801838f2249c.htm">IOMStorable</a>)</td></tr><tr><td><a href="a510522a-5a43-ae2b-e75a-21b56fcbca11.htm">ToString</a></td><td>
+            Brief description of object in term of Object model.
+            default implementation is <span class="noLink">ToString<span id="LSTE6D1B568_14" data-languageSpecificText="cs=()|vb=|cpp=()|nu=()|fs=()"></span></span>. Concrete implementation may be more verbose.
+            <br />(Inherited from <a href="e0c382bb-4715-bec1-02cd-a43bcc3ebe05.htm">IOMSnapshot</a>)</td></tr></table></div><h2 class="quickLinkHeader"><span class="icon toggleSection" tabindex="0"><i class="fa fa-angle-down"></i></span>Extension Methods</h2><div id="IDAEASection"><table id="ExtensionList" class="table is-hoverable"><tr><td><a href="63238ceb-ac36-765a-ddf9-2dc5f5e60fb6.htm">Deserialize</a></td><td>
+            deserializes object and remenber repeatlist.
+            object can be saved
+            <br />(Defined by <a href="309134e2-e0ff-d808-49b3-f63b743be2a8.htm">SerializationExtension</a>)</td></tr><tr><td><a href="c0bbb9c7-3a9f-72cf-da99-3999ddf9a4df.htm">GetSerializableProperties</a></td><td>
+            Returns list of properties which are require serialization
+            <br />(Defined by <a href="309134e2-e0ff-d808-49b3-f63b743be2a8.htm">SerializationExtension</a>)</td></tr><tr><td><a href="3cfae71b-62bf-67e3-f398-0a0c4e7c7fa7.htm">OMDelete</a></td><td>
+            Apply update of the specific snapshot.
+            virtually any object may be updated even those which are not supporting <a href="9a8ef92f-638a-7ddc-e913-801838f2249c.htm">IOMStorable</a> interface.
+            <br />(Defined by <a href="014501a0-8a00-42cc-c61b-1c79d9322683.htm">CollectionTransactionsHelper</a>)</td></tr><tr><td><a href="7a5052cb-d840-3174-bdba-81c9c7769da8.htm">OMSave</a></td><td>
+            Apply update of the specific snapshot.
+            virtually any object may be updated even those which are not supporting <a href="9a8ef92f-638a-7ddc-e913-801838f2249c.htm">IOMStorable</a> interface.
+            <br />(Defined by <a href="014501a0-8a00-42cc-c61b-1c79d9322683.htm">CollectionTransactionsHelper</a>)</td></tr><tr><td><a href="8871efd3-6a1a-3965-8a6f-c84500f73341.htm">SerializeObject</a></td><td>
+            Deserializer for IOMSnapshot
+            <br />(Defined by <a href="309134e2-e0ff-d808-49b3-f63b743be2a8.htm">SerializationExtension</a>)</td></tr><tr><td><a href="fdcb2bba-3fac-34b6-30c4-de782c3b9b2e.htm">SerializeProperty</a></td><td>
+            returns false if there are no enough information at the moment and it should be repeated after after all objects will be restored.
+            Typical case is forward reference to the <a href="da3565aa-65e9-99d3-5edd-0667f0ce3f0b.htm">DN</a> object.
+            <br />(Defined by <a href="309134e2-e0ff-d808-49b3-f63b743be2a8.htm">SerializationExtension</a>)</td></tr><tr><td><a href="f873ec43-bfcc-46c7-456f-a9d29e13575e.htm">TryDeserializeProperty</a></td><td>
+            returns false if there are no enough information at the moment and it should be repeated after after all objects will be restored.
+            Typical case is forward reference to the <a href="da3565aa-65e9-99d3-5edd-0667f0ce3f0b.htm">DN</a> object.
+            <br />(Defined by <a href="309134e2-e0ff-d808-49b3-f63b743be2a8.htm">SerializationExtension</a>)</td></tr></table></div><h2 class="quickLinkHeader"><span class="icon toggleSection" tabindex="0"><i class="fa fa-angle-down"></i></span>See Also</h2><div id="seeAlsoSection"><h4>Reference</h4><div><a href="0742b1c1-2ceb-e24b-1bea-b8e461055593.htm">TCX.Configuration Namespace</a></div></div></div><div id="InThisArticleColumn" class="column is-hidden-mobile"><nav class="menu sticky is-hidden"><p class="menu-label"><strong>In This Article</strong></p><ul id="InThisArticleMenu" class="menu-list"><li><a class="quickLink">Definition</a></li><li><a class="quickLink">Properties</a></li><li><a class="quickLink">Methods</a></li><li><a class="quickLink">Extension Methods</a></li><li><a class="quickLink">See Also</a></li></ul></nav></div></div></div></div><script>$(function(){
+SetDefaultLanguage("cs");
+LoadTocFile(null, null);
+InitializeQuickLinks();
+
+$(".toggleSection" ).click(function () {
+    SectionExpandCollapse(this);
+});
+
+$(".toggleSection").keypress(function () {
+    SectionExpandCollapseCheckKey(this, event)
+});
+hljs.highlightAll();
+});</script></body></html>

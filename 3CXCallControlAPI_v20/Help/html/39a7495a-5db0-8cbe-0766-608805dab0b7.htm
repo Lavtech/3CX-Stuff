@@ -1,0 +1,212 @@
+﻿<!DOCTYPE html ><html lang="en-US"><head><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><link rel="shortcut icon" href="../icons/favicon.ico" /><link rel="stylesheet" href="../css/bulma.css" /><link rel="stylesheet" href="../css/font-awesome.min.css" /><link rel="stylesheet" href="../css/presentationStyle.css" /><link rel="stylesheet" href="../css/vs.min.css" /><script src="../scripts/jquery-3.5.1.min.js"></script><script src="../scripts/clipboard.min.js"></script><script src="../scripts/highlight.min.js"></script><script src="../scripts/presentationStyle.js"></script><title>Tenant Interface</title><meta name="Title" content="Tenant" /><meta name="Help.Id" content="T:TCX.Configuration.Tenant" /><meta name="Help.ContentType" content="Reference" /><meta name="container" content="TCX.Configuration" /><meta name="guid" content="39a7495a-5db0-8cbe-0766-608805dab0b7" /><meta name="Description" content="Represents a tenant in the Phone System." /><meta name="tocFile" content="../toc/IDBA.xml" /></head><body><div class="fixedLayout"><div id="Header" class="fixedHeader"><div class="pageHeader level mb-0 py-2 px-4"><div id="TitleContainer" class="level-left"><div id="DocumentationTitle" class="level-item">3CX Configuration and Call Control API v4.0.0.0 (v20)</div></div><div id="LangFilterSearchContainer" class="level-right"><div class="level-item"><div class="dropdown is-hoverable"><div class="dropdown-trigger"><button class="button" aria-haspopup="true" aria-controls="dropdown-menu"><span id="CurrentLanguage"></span><span class="icon is-small"><i class="fa fa-angle-down" aria-hidden="true"></i></span></button></div><div class="dropdown-menu" role="menu"><div id="LanguageSelections" class="dropdown-content"><a class="dropdown-item languageFilterItem" data-languageId="cs">C#</a></div></div></div></div><div class="level-item"><form id="SearchForm" action="#" onsubmit="TransferToSearchPage(); return false;"><div class="field"><div class="control has-icons-left"><input id="SearchTerms" class="input" type="text" maxlength="200" placeholder="Search" /><span class="icon is-small is-left"><i class="fa fa-search"></i></span><button id="SearchButton" type="submit" class="is-hidden"></button></div></div></form></div></div></div></div><div class="fixedContent"><nav class="breadcrumb my-1 px-2 border-bottom" role="navigation"><ul id="TopicBreadcrumbs" /></nav><div id="ContentContainer" class="columns pl-5 pr-5 fixedContent"><div id="ShowHideTOCColumn" class="column is-hidden-tablet"><a id="ShowHideTOC">Show/Hide TOC</a></div><div id="TOCColumn" class="column is-hidden-mobile"><nav class="toc"><ul id="TableOfContents" class="toc-menu" /></nav></div><div id="Resizer" class="is-hidden"></div><div id="TopicContent" class="column content is-7"><h1>Tenant Interface</h1><div class="summary">
+            Represents a tenant in the Phone System.
+            </div><h2 class="quickLinkHeader"><span class="icon toggleSection" tabindex="0"><i class="fa fa-angle-down"></i></span>Definition</h2><div id="IDBSection"><strong>Namespace:</strong> <a href="0742b1c1-2ceb-e24b-1bea-b8e461055593.htm">TCX.Configuration</a><br /><strong>Assembly:</strong> 3cxpscomcpp2 (in 3cxpscomcpp2.dll) Version: 20.0.1<div class="codeSnippet"><div class="codeHeader"><span class="codeHeaderTitle">C#</span><span class="buttons"><button class="button is-small is-light copyCode" title="Copy"><span class="icon is-small"><i class="fa fa-copy"></i></span><span>Copy</span></button></span></div><div class="codePanel hljs"><pre xml:space="preserve"><code class="language-cs"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="identifier">Tenant</span> : <span class="identifier">IOMStorable</span>, <span class="identifier">IOMRemovable</span>, 
+	<span class="identifier">IOMSnapshot</span>, <span class="identifier">IEquatable</span>&lt;<span class="identifier">Object</span>&gt;, <span class="identifier">ICalendarHolder</span>, <span class="identifier">IDisposable</span></code></pre></div></div><dl class="implementsList"><dt>Implements</dt><dd><span class="noLink">IDisposable</span>, <span class="noLink">IEquatable</span><span id="LST1901D339_0" data-languageSpecificText="cpp=&lt;|cs=&lt;|fs=&lt;|vb=(Of |nu=("></span><span class="noLink">Object</span><span id="LST1901D339_1" data-languageSpecificText="cpp=&gt;|cs=&gt;|fs=&gt;|vb=)|nu=)"></span>, <a href="ebf127c3-93c1-3c30-ff7e-947471bb49d5.htm">ICalendarHolder</a>, <a href="a226e435-a02c-3fd6-a17d-9ec2cde4a420.htm">IOMRemovable</a>, <a href="e0c382bb-4715-bec1-02cd-a43bcc3ebe05.htm">IOMSnapshot</a>, <a href="9a8ef92f-638a-7ddc-e913-801838f2249c.htm">IOMStorable</a></dd></dl></div><h2 class="quickLinkHeader"><span class="icon toggleSection" tabindex="0"><i class="fa fa-angle-down"></i></span>Properties</h2><div id="ID0YB0EASection"><table id="PropertyList" class="table is-hoverable"><tr><td><a href="6e1c6265-6332-1441-2db7-594a7a1e9127.htm">BreakTime</a></td><td>
+            Stores default office break time. (used in automated extension status switching etc.)<br /><a href="9057ced5-a680-e3aa-78b6-a5cb3b4830d7.htm">BreakTime</a> property may reference this schedule.
+            if <a href="9057ced5-a680-e3aa-78b6-a5cb3b4830d7.htm">BreakTime</a> is configured with type <a href="f4aba282-dd77-884f-0a5c-d58e73b36db2.htm">OfficeHours</a> the schedule of BreakTime should be taken from here.
+            </td></tr><tr><td><a href="ee691ff6-ac83-47c7-0bf6-efe8adf952f2.htm">CalendarHours</a></td><td>
+            Object which represent CalendarHoursType
+            <br />(Inherited from <a href="ebf127c3-93c1-3c30-ff7e-947471bb49d5.htm">ICalendarHolder</a>)</td></tr><tr><td><a href="791b6e62-fb44-eca8-c4d5-13922d81ee08.htm">CalendarHoursType</a></td><td>
+            Schedule hours can be changed without modification of the hours set. We don't need to update set of hours ranges each time when we update type of schedule
+            <br />(Inherited from <a href="ebf127c3-93c1-3c30-ff7e-947471bb49d5.htm">ICalendarHolder</a>)</td></tr><tr><td><a href="d8c85d5a-ad5b-fbe5-6590-ef90dff3232f.htm">DN</a></td><td>
+            Serialization property. Collection of DNs
+            </td></tr><tr><td><a href="489e0390-9bfc-8a62-3620-5f0cf79e0e47.htm">Groups</a></td><td>
+            Serialization property. Collection of Groups
+            </td></tr><tr><td><a href="065934ad-2f6f-f3ba-8449-4e1b4f199811.htm">HasAttached</a></td><td>
+            Indicates that the object has attached data for saving transaction
+            <br />(Inherited from <a href="e0c382bb-4715-bec1-02cd-a43bcc3ebe05.htm">IOMSnapshot</a>)</td></tr><tr><td><a href="70daae49-50f8-400e-c91a-9480f2332f65.htm">HolidaysActivity</a></td><td>
+            specifies activity of schedule during holidays
+            <br />(Inherited from <a href="ebf127c3-93c1-3c30-ff7e-947471bb49d5.htm">ICalendarHolder</a>)</td></tr><tr><td><a href="096fe9ba-e6f4-a406-09a1-22f69c309c0b.htm">Hours</a></td><td>
+            Time schedule of when object is active. Interpretation of this data depends on the type of object. It can be OfficeTime, the time when specific routing rule is active etc.
+            <br />(Inherited from <a href="ebf127c3-93c1-3c30-ff7e-947471bb49d5.htm">ICalendarHolder</a>)</td></tr><tr><td><a href="6a8b7892-e555-f591-2969-5c719dfd54db.htm">ID</a></td><td>
+            each object has unique ID.
+            It is the same as the value returned by GetHashCode. (legacy)
+            new object has ID=0. After successful call to save snapshot gets persistent ID.
+            <br />(Inherited from <a href="e0c382bb-4715-bec1-02cd-a43bcc3ebe05.htm">IOMSnapshot</a>)</td></tr><tr><td><a href="f7f8b655-8fad-2acc-5577-a892ebdcd1e9.htm">InboundCallerIDBlock</a></td><td>
+            return all global of ibound caller id block entries
+            </td></tr><tr><td><a href="01172b55-927c-e6e5-9ad2-47ec7541ceb9.htm">Name</a></td><td>
+            Unique name of tenant.
+            </td></tr><tr><td><a href="0713b1e1-4992-a01a-001f-fd29ba3fa762.htm">OfficeHolidays</a></td><td>
+            Serialization property. Collection of OfficeHolidays
+            </td></tr><tr><td><a href="8342e021-369d-2ce3-932b-bb54efbd95c7.htm">OutboundRules</a></td><td>
+            Serialization property. Collection of OutboundRules
+            </td></tr><tr><td><a href="d327e707-e4e8-30b0-ccdc-e4da02f1c45f.htm">PhoneBookEntries</a></td><td>
+            Serialization property. Collection of phone book entries attached to the Tenant
+            </td></tr><tr><td><a href="f27211cf-dd31-0391-8975-6bbf7cfb9f7a.htm">Properties</a></td><td>
+            Serialization property. Collection of OfficeHolidays
+            </td></tr></table></div><h2 class="quickLinkHeader"><span class="icon toggleSection" tabindex="0"><i class="fa fa-angle-down"></i></span>Methods</h2><div id="IDHEASection"><table id="MethodList" class="table is-hoverable"><tr><td><a href="56df93cd-a98b-787f-8c4f-073e7189fe5e.htm">AttachOnSave(IEnumerable<span id="LST1901D339_2" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>IOMSnapshot<span id="LST1901D339_3" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span>)</a></td><td>
+            This method allows to add other object updates to the main object saving transaction
+            <br />(Inherited from <a href="e0c382bb-4715-bec1-02cd-a43bcc3ebe05.htm">IOMSnapshot</a>)</td></tr><tr><td><a href="ba52f8e7-ed2a-701f-f44e-329e940f2b66.htm">AttachOnSave(<span id="LST1901D339_4" data-languageSpecificText="cpp=array&lt;"></span>IOMSnapshot<span id="LST1901D339_5" data-languageSpecificText="cpp=&gt;|cs=[]|vb=()|nu=[]|fs=[]"></span>)</a></td><td>
+            This method allows to add other object updates to the saving transaction of main object
+            <br />(Inherited from <a href="e0c382bb-4715-bec1-02cd-a43bcc3ebe05.htm">IOMSnapshot</a>)</td></tr><tr><td><a href="05482778-0eb4-a3b1-b13a-a0fc218774aa.htm">Clone</a></td><td>
+            Makes fresh snapshot of the object without modifications
+            <br />(Inherited from <a href="e0c382bb-4715-bec1-02cd-a43bcc3ebe05.htm">IOMSnapshot</a>)</td></tr><tr><td><a href="f8172a14-3a5e-bc63-8820-876c38c4cd9d.htm">CreateConferencePlaceExtension<span id="LST1901D339_6" data-languageSpecificText="cs=()|vb=|cpp=()|nu=()|fs=()"></span></a></td><td>
+            Creates a new <a href="c966a8df-ef6e-2060-b196-82bc6686d437.htm">ConferencePlaceExtension</a> object.
+            <br /><span class="tag is-danger">Obsolete.</span></td></tr><tr><td><a href="f5667f45-9064-4b66-48bc-0b9d493e6759.htm">CreateConferencePlaceExtension(String)</a></td><td>
+            Creates a new <a href="c966a8df-ef6e-2060-b196-82bc6686d437.htm">ConferencePlaceExtension</a> object.
+            </td></tr><tr><td><a href="b708883b-5d7f-288e-426d-851ba758b439.htm">CreateExtension<span id="LST1901D339_7" data-languageSpecificText="cs=()|vb=|cpp=()|nu=()|fs=()"></span></a></td><td>
+            Creates a new <a href="5e32ca39-7a3e-fded-d66c-b5e03dc189cf.htm">Extension</a> object.
+            <br /><span class="tag is-danger">Obsolete.</span></td></tr><tr><td><a href="1bb874e8-62ff-5564-55d9-8a46fa72c8f6.htm">CreateExtension(String)</a></td><td>
+            Creates a new <a href="5e32ca39-7a3e-fded-d66c-b5e03dc189cf.htm">Extension</a> object
+            Creates initilize full set of default profiles.
+            sets Current profile to Available
+            and adds extension to DEFAULT group with users role.
+            </td></tr><tr><td><a href="aebf0743-819a-e43a-4136-3eed1b790bc5.htm">CreateExternalLine(Gateway)</a></td><td>
+            Creates a new <a href="230d99f3-af33-cf4a-cdd9-b4cfd1864b4e.htm">ExternalLine</a> for the given <a href="81741c84-f171-33af-25d7-a5873b1fa7f9.htm">Gateway</a> object.
+            <br /><span class="tag is-danger">Obsolete.</span></td></tr><tr><td><a href="a529dbfa-c002-78d7-e97e-bf95b119b891.htm">CreateExternalLine(Gateway, String)</a></td><td>
+            Creates a new <a href="230d99f3-af33-cf4a-cdd9-b4cfd1864b4e.htm">ExternalLine</a> for the given <a href="81741c84-f171-33af-25d7-a5873b1fa7f9.htm">Gateway</a> object.
+            </td></tr><tr><td><a href="5ffa4b80-2251-f8e8-9034-4f0c633b7d5a.htm">CreateFaxExtension<span id="LST1901D339_8" data-languageSpecificText="cs=()|vb=|cpp=()|nu=()|fs=()"></span></a></td><td>
+            Creates a new <a href="246cadb8-a3df-655a-bfb3-5c8b1ac8529c.htm">FaxExtension</a> object.
+            <br /><span class="tag is-danger">Obsolete.</span></td></tr><tr><td><a href="ecdd8a00-ef06-55c7-332a-d728c7f10de3.htm">CreateFaxExtension(String)</a></td><td>
+            Creates a new <a href="246cadb8-a3df-655a-bfb3-5c8b1ac8529c.htm">FaxExtension</a> object.
+            </td></tr><tr><td><a href="b11fbce0-6369-1ff7-4754-aa1b3e543d7e.htm">CreateGroup<span id="LST1901D339_9" data-languageSpecificText="cs=()|vb=|cpp=()|nu=()|fs=()"></span></a></td><td>
+            Creates a new <a href="72e586d3-d05d-7346-8725-062e22f9e1bb.htm">Group</a> object.
+            </td></tr><tr><td><a href="be82719c-6788-ad12-3bf6-1b97eab3734e.htm">CreateGroup(String, IEnumerable<span id="LST1901D339_10" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>RoleDescription<span id="LST1901D339_11" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span>, IDictionary<span id="LST1901D339_12" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>DN, String<span id="LST1901D339_13" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span>)</a></td><td>
+            Bulk creation of group
+            </td></tr><tr><td><a href="b2f2ca80-7d57-1cbe-dacf-d9dc9df6e914.htm">CreateInboundCallerIDBlockEntry</a></td><td>
+            Creates system wide inbound caller id block endtry
+            </td></tr><tr><td><a href="1582807d-16d9-e056-7f13-bf0d2d8e7a45.htm">CreateIVR<span id="LST1901D339_14" data-languageSpecificText="cs=()|vb=|cpp=()|nu=()|fs=()"></span></a></td><td>
+            Create a new IVR (Digital Receptionist) entity for this tenant.
+            <br /><span class="tag is-danger">Obsolete.</span></td></tr><tr><td><a href="4b2f2756-7b94-d223-0fc8-c3c2dd4f5cc5.htm">CreateIVR(String)</a></td><td>
+            Create a new IVR (Digital Receptionist) entity for this tenant.
+            </td></tr><tr><td><a href="97947ba6-762e-5241-aa20-f97a94420569.htm">CreateOfficeHoliday<span id="LST1901D339_15" data-languageSpecificText="cs=()|vb=|cpp=()|nu=()|fs=()"></span></a></td><td>
+            Creates a new <a href="4aa11e59-bb60-7b7f-c037-89a6f4a22414.htm">OfficeHoliday</a> object for this tenant.
+            </td></tr><tr><td><a href="e261d89e-dd68-ed95-4a7c-a9ac9c5c362f.htm">CreateOfficeHoliday(String, Byte, Byte, UInt16, Nullable<span id="LST1901D339_16" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>TimeSpan<span id="LST1901D339_17" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span>, Byte, Byte, UInt16, Nullable<span id="LST1901D339_18" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>TimeSpan<span id="LST1901D339_19" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span>)</a></td><td>
+            Creates a new <a href="4aa11e59-bb60-7b7f-c037-89a6f4a22414.htm">OfficeHoliday</a> object for this tenant.
+            </td></tr><tr><td><a href="228d6e43-6537-c8b8-851c-c57826471ba7.htm">CreateOrGetProperty</a></td><td>
+            this method allows to create or update tenant property in context of other transaction.
+            </td></tr><tr><td><a href="55f41a7d-d6d9-bafe-c38d-aa733c6b8f03.htm">CreateOutboundRule</a></td><td>
+            Creates a new outbound rule for this tenant.
+            </td></tr><tr><td><a href="15c0220f-fbbc-ddd6-ef30-d782a961b967.htm">CreateParkExtension<span id="LST1901D339_20" data-languageSpecificText="cs=()|vb=|cpp=()|nu=()|fs=()"></span></a></td><td>
+            Creates a new <a href="191c317e-65dd-11d6-b84d-c3fa26b5e9a2.htm">ParkExtension</a> object.
+            <br /><span class="tag is-danger">Obsolete.</span></td></tr><tr><td><a href="505ff757-e3c9-551e-59b4-f2a85628dace.htm">CreateParkExtension(String)</a></td><td>
+            Creates a new <a href="191c317e-65dd-11d6-b84d-c3fa26b5e9a2.htm">ParkExtension</a> object.
+            </td></tr><tr><td><a href="ba2c42e8-12ea-bdf7-9608-e8ff50a22369.htm">CreatePhoneBookEntry</a></td><td>
+            Creates a new <a href="0a089843-a142-cc18-83f0-b916a9b1eca5.htm">PhoneBookEntry</a> object attached to tenant. (global phone book)
+            </td></tr><tr><td><a href="2fc8eb41-84de-00fb-62bc-e95bb5fd75c8.htm">CreateQueue<span id="LST1901D339_21" data-languageSpecificText="cs=()|vb=|cpp=()|nu=()|fs=()"></span></a></td><td>
+            Creates a new <a href="da1ee9c7-1f00-5c22-6cab-6d3161e39522.htm">Queue</a> object.
+            <br /><span class="tag is-danger">Obsolete.</span></td></tr><tr><td><a href="c92262aa-53dd-7e41-d498-bc82aef2226d.htm">CreateQueue(String)</a></td><td>
+            Creates a new <a href="da1ee9c7-1f00-5c22-6cab-6d3161e39522.htm">Queue</a> object.
+            </td></tr><tr><td><a href="1f899987-3a51-408b-ce05-991e270c09df.htm">CreateRingGroup<span id="LST1901D339_22" data-languageSpecificText="cs=()|vb=|cpp=()|nu=()|fs=()"></span></a></td><td>
+            Creates a new <a href="0c6ad2c1-7e73-9610-2bb6-c6851b04cb56.htm">RingGroup</a> object.
+            <br /><span class="tag is-danger">Obsolete.</span></td></tr><tr><td><a href="3a98e094-cd9a-e96f-5ec4-c32337941446.htm">CreateRingGroup(String)</a></td><td>
+            Creates a new <a href="0c6ad2c1-7e73-9610-2bb6-c6851b04cb56.htm">RingGroup</a> object.
+            </td></tr><tr><td><a href="70dd5c47-7e02-1cec-5eed-e7b9b060844d.htm">CreateRoutePoint</a></td><td>
+            Creates a mew <a href="0360f575-2d07-89cd-7265-73ed4c4ca945.htm">RoutePoint</a> object
+            </td></tr><tr><td><a href="6a98d177-7399-07e4-17b1-de397632d730.htm">CreateSpecialMenu<span id="LST1901D339_23" data-languageSpecificText="cs=()|vb=|cpp=()|nu=()|fs=()"></span></a></td><td>
+            Creates a new <a href="8529ac3e-85a9-9bdd-035e-fd1ff07bf08f.htm">SpecialMenu</a> object.
+            <br /><span class="tag is-danger">Obsolete.</span></td></tr><tr><td><a href="b2e7548f-9a88-4e25-2279-f25b2b90a0e4.htm">CreateSpecialMenu(String)</a></td><td>
+            Creates a new <a href="8529ac3e-85a9-9bdd-035e-fd1ff07bf08f.htm">SpecialMenu</a> object.
+            </td></tr><tr><td><a href="bd75f75f-1190-33fe-f61d-2f4d29850299.htm">Delete</a></td><td>
+            Delete object from configuration database.
+            <br />(Inherited from <a href="a226e435-a02c-3fd6-a17d-9ec2cde4a420.htm">IOMRemovable</a>)</td></tr><tr><td><a href="898e1e2e-3798-b181-508a-e9cce57a9218.htm">DeleteOnSave(IEnumerable<span id="LST1901D339_24" data-languageSpecificText="cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=("></span>IOMSnapshot<span id="LST1901D339_25" data-languageSpecificText="cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)"></span>)</a></td><td>
+            Allows to remove other objects as a part of the main object saving transaction.
+            <br />(Inherited from <a href="e0c382bb-4715-bec1-02cd-a43bcc3ebe05.htm">IOMSnapshot</a>)</td></tr><tr><td><a href="19006aa0-7409-4f7d-a876-43d90de0d7a5.htm">DeleteOnSave(<span id="LST1901D339_26" data-languageSpecificText="cpp=array&lt;"></span>IOMSnapshot<span id="LST1901D339_27" data-languageSpecificText="cpp=&gt;|cs=[]|vb=()|nu=[]|fs=[]"></span>)</a></td><td>
+            Allows to remove other objects as a part of the main object saving transaction.
+            <br />(Inherited from <a href="e0c382bb-4715-bec1-02cd-a43bcc3ebe05.htm">IOMSnapshot</a>)</td></tr><tr><td><a href="59c1541e-88b3-3bbb-c768-bf5eb46873f3.htm">DeleteProperty</a></td><td>
+            removes property form list of Tenant properties
+            </td></tr><tr><td><a href="7a545033-ecf7-a1ff-ad8b-881fb06e6068.htm">FindContacts</a></td><td>
+            Provides array of <a href="0a089843-a142-cc18-83f0-b916a9b1eca5.htm">PhoneBookEntry</a> matching specified caller id in company phonebook <br />
+            Use <a href="1fd9cf48-e7c1-d5e2-6c0a-7c9292f224d0.htm">FindContacts(String, UInt32)</a> to search in personal phone book.
+            best match priority is:<br />
+            1. all with exact match<br />
+            otherwise<br />
+            2. ended with specified number<br />
+            otherwise<br />
+            3. longest possible match of the tail which is not less then min_len<br />
+            otherwise - empty array<br /></td></tr><tr><td><a href="cad55092-9013-f2df-daf9-06dfde56efe1.htm">GetActiveConnections</a></td><td>
+            Returns the set of current active connections in the phone system,
+            for this tenant.
+            <br /><span class="tag is-danger">Obsolete.</span></td></tr><tr><td><a href="cbedec96-d09e-9d16-9be3-f676891e9632.htm">GetConferencePlaceExtensions</a></td><td>
+            The list of conference place extensions for this tenant.
+            <br /><span class="tag is-danger">Obsolete.</span></td></tr><tr><td><a href="a4df5d23-8edf-b16b-d842-66ed98755c33.htm">GetDN</a></td><td>
+            The list of DNs for this tenant.
+            <br /><span class="tag is-danger">Obsolete.</span></td></tr><tr><td><a href="249eed2f-fe43-f717-4071-96a2c46ec22e.htm">GetExtensionGroups</a></td><td>
+            The list of extension groups for this tenant.
+            <br /><span class="tag is-danger">Obsolete.</span></td></tr><tr><td><a href="7427658c-1a46-d03e-703b-7969ab90fefa.htm">GetExtensions</a></td><td>
+            The list of extensions for this tenant.
+            <br /><span class="tag is-danger">Obsolete.</span></td></tr><tr><td><a href="b4cca643-3e3a-1974-f138-0a314eb80184.htm">GetExternalLines</a></td><td>
+            The list of external lines for this tenant.
+            <br /><span class="tag is-danger">Obsolete.</span></td></tr><tr><td><a href="9cd5c215-b26b-16d2-2d2e-aa788ec14d0b.htm">GetFaxExtensions</a></td><td>
+            The list of Fax extensions for this tenant.
+            <br /><span class="tag is-danger">Obsolete.</span></td></tr><tr><td><a href="bb64c832-b016-99ac-1847-6de26550025e.htm">GetHashCode</a></td><td>
+            Hash code is "record" identifier. So all snapshots of the object has the same hash.
+            <br />(Inherited from <a href="e0c382bb-4715-bec1-02cd-a43bcc3ebe05.htm">IOMSnapshot</a>)</td></tr><tr><td><a href="ef2f706a-4db7-986d-a169-f01a8659042d.htm">GetHolidayOfToday</a></td><td>
+            check for holiday
+            <br /><span class="tag is-danger">Obsolete.</span></td></tr><tr><td><a href="1ba11e90-3f30-9455-a482-95879281479d.htm">GetIVRs</a></td><td>
+            The list of IVR extensions for this tenant.
+            <br /><span class="tag is-danger">Obsolete.</span></td></tr><tr><td><a href="beed5f29-6d36-4dd8-f0a8-9ce1ca1e8018.htm">GetNextAvailableDN(String)</a></td><td>
+            returns unique dnName for the new object which begins with specified prefix.
+            </td></tr><tr><td><a href="4743c938-2178-a513-eedf-ab094e82e36d.htm">GetNextAvailableDN(String, Int32)</a></td><td>
+            returns unique dnName for the new object which begins with specified prefix.
+            </td></tr><tr><td><a href="6c5701b3-9abb-04df-c66a-6297aea471ba.htm">GetOfficeHolidayFor</a></td><td>
+            returns the holiday which is comfigured for specified time.
+            This method is working similar to <a href="a9cf6f0f-8281-14a0-440f-7a96a9ade05f.htm">GetOfficeHolidayFor(DateTime)</a></td></tr><tr><td><a href="f8c1f071-bedf-e82c-7750-7d8d64402f4c.htm">GetOfficeHolidays</a></td><td>
+            Returns collection of office holidays.
+            </td></tr><tr><td><a href="0c49d5ae-af27-e4ee-0d13-208e3321cf7d.htm">GetOutboundRules</a></td><td>
+            Outbound rules, which determine which external lines to use for which calls.
+            <br /><span class="tag is-danger">Obsolete.</span></td></tr><tr><td><a href="585d0cef-e89e-cbfa-256e-04456c5166ce.htm">GetParkExtensions</a></td><td>
+            The list of park extensions for this tenant.
+            <br /><span class="tag is-danger">Obsolete.</span></td></tr><tr><td><a href="cbd608f0-3358-e4a2-fa8d-e80c9bcca252.htm">GetPhoneBookEntries</a></td><td>
+            Collection of Phone Book entries.
+            </td></tr><tr><td><a href="89eb2d42-031a-d8d4-fbac-bfcfdb414752.htm">GetProperties</a></td><td>
+            Collection of custom tenant properties.
+            </td></tr><tr><td><a href="6ab5751c-e47a-392d-c138-85a8cd6040cf.htm">GetPropertyByName(String)</a></td><td>
+            Returns a tenant property given its name, or <span class="keyword"><span id="LST1901D339_28" data-languageSpecificText="cpp=nullptr|vb=Nothing|nu=null"></span></span>
+            if not found.
+            </td></tr><tr><td><a href="b4e61ff2-194e-9367-88d4-791db1839c70.htm">GetPropertyByName(String, Boolean)</a></td><td>
+            Returns a particular Tenant property given its name from persistent storage or from local cache, or <span class="keyword"><span id="LST1901D339_29" data-languageSpecificText="cpp=nullptr|vb=Nothing|nu=null"></span></span> if not found.
+            </td></tr><tr><td><a href="ae35bb1e-440f-3575-2bf5-2c5a1e2a9992.htm">GetPropertyValue</a></td><td>
+            returns value of property or null if it is not defined.
+            </td></tr><tr><td><a href="3f5fce34-cfaa-e845-8efa-924dc7629558.htm">GetQueues</a></td><td>
+            The list of queues for this tenant.
+            <br /><span class="tag is-danger">Obsolete.</span></td></tr><tr><td><a href="78f08cd6-3818-2ed9-7aa5-2da50027bd3f.htm">GetRingGroups</a></td><td>
+            The list of ring groups for this tenant.
+            <br /><span class="tag is-danger">Obsolete.</span></td></tr><tr><td><a href="818fb87d-9967-7d39-b7a2-80c33d0e7691.htm">GetSpecialMenus</a></td><td>
+            The list of special menu extensions for this tenant.
+            <br /><span class="tag is-danger">Obsolete.</span></td></tr><tr><td><a href="7402d910-ae30-712a-fd48-79d094b0dd8c.htm">IsHoliday</a></td><td>
+            Returns if given DateTimeOffset object is in holiday range
+            </td></tr><tr><td><a href="706b34ce-9864-a7be-04ad-075fa889c246.htm">Refresh</a></td><td>
+            Reverts all modifications (if any) and reloads object from configuration/realtime storage
+            <br />(Inherited from <a href="9a8ef92f-638a-7ddc-e913-801838f2249c.htm">IOMStorable</a>)</td></tr><tr><td><a href="3223153b-5ae0-bf41-26a3-46fed16dee2e.htm">Save</a></td><td>
+            Commits the changes. This method inserts new or update existing object in persistent storage.
+            <br />(Inherited from <a href="9a8ef92f-638a-7ddc-e913-801838f2249c.htm">IOMStorable</a>)</td></tr><tr><td><a href="0fc962cd-72d8-0fcc-aae1-f69dfa1e2135.htm">SetProperty(String, String)</a></td><td>
+            Adds new or updates existing property of Tenant.
+            </td></tr><tr><td><a href="dc127d1d-8a9a-975d-ad75-ccb9f843c0ed.htm">SetProperty(String, String, PropertyType, String)</a></td><td>
+            Adds new or updates existing property of Tenant.
+            </td></tr><tr><td><a href="a510522a-5a43-ae2b-e75a-21b56fcbca11.htm">ToString</a></td><td>
+            Brief description of object in term of Object model.
+            default implementation is <span class="noLink">ToString<span id="LST1901D339_30" data-languageSpecificText="cs=()|vb=|cpp=()|nu=()|fs=()"></span></span>. Concrete implementation may be more verbose.
+            <br />(Inherited from <a href="e0c382bb-4715-bec1-02cd-a43bcc3ebe05.htm">IOMSnapshot</a>)</td></tr></table></div><h2 class="quickLinkHeader"><span class="icon toggleSection" tabindex="0"><i class="fa fa-angle-down"></i></span>Extension Methods</h2><div id="IDAEASection"><table id="ExtensionList" class="table is-hoverable"><tr><td><a href="63238ceb-ac36-765a-ddf9-2dc5f5e60fb6.htm">Deserialize</a></td><td>
+            deserializes object and remenber repeatlist.
+            object can be saved
+            <br />(Defined by <a href="309134e2-e0ff-d808-49b3-f63b743be2a8.htm">SerializationExtension</a>)</td></tr><tr><td><a href="c0bbb9c7-3a9f-72cf-da99-3999ddf9a4df.htm">GetSerializableProperties</a></td><td>
+            Returns list of properties which are require serialization
+            <br />(Defined by <a href="309134e2-e0ff-d808-49b3-f63b743be2a8.htm">SerializationExtension</a>)</td></tr><tr><td><a href="3cfae71b-62bf-67e3-f398-0a0c4e7c7fa7.htm">OMDelete</a></td><td>
+            Apply update of the specific snapshot.
+            virtually any object may be updated even those which are not supporting <a href="9a8ef92f-638a-7ddc-e913-801838f2249c.htm">IOMStorable</a> interface.
+            <br />(Defined by <a href="014501a0-8a00-42cc-c61b-1c79d9322683.htm">CollectionTransactionsHelper</a>)</td></tr><tr><td><a href="7a5052cb-d840-3174-bdba-81c9c7769da8.htm">OMSave</a></td><td>
+            Apply update of the specific snapshot.
+            virtually any object may be updated even those which are not supporting <a href="9a8ef92f-638a-7ddc-e913-801838f2249c.htm">IOMStorable</a> interface.
+            <br />(Defined by <a href="014501a0-8a00-42cc-c61b-1c79d9322683.htm">CollectionTransactionsHelper</a>)</td></tr><tr><td><a href="8871efd3-6a1a-3965-8a6f-c84500f73341.htm">SerializeObject</a></td><td>
+            Deserializer for IOMSnapshot
+            <br />(Defined by <a href="309134e2-e0ff-d808-49b3-f63b743be2a8.htm">SerializationExtension</a>)</td></tr><tr><td><a href="fdcb2bba-3fac-34b6-30c4-de782c3b9b2e.htm">SerializeProperty</a></td><td>
+            returns false if there are no enough information at the moment and it should be repeated after after all objects will be restored.
+            Typical case is forward reference to the <a href="da3565aa-65e9-99d3-5edd-0667f0ce3f0b.htm">DN</a> object.
+            <br />(Defined by <a href="309134e2-e0ff-d808-49b3-f63b743be2a8.htm">SerializationExtension</a>)</td></tr><tr><td><a href="f873ec43-bfcc-46c7-456f-a9d29e13575e.htm">TryDeserializeProperty</a></td><td>
+            returns false if there are no enough information at the moment and it should be repeated after after all objects will be restored.
+            Typical case is forward reference to the <a href="da3565aa-65e9-99d3-5edd-0667f0ce3f0b.htm">DN</a> object.
+            <br />(Defined by <a href="309134e2-e0ff-d808-49b3-f63b743be2a8.htm">SerializationExtension</a>)</td></tr></table></div><h2 class="quickLinkHeader"><span class="icon toggleSection" tabindex="0"><i class="fa fa-angle-down"></i></span>See Also</h2><div id="seeAlsoSection"><h4>Reference</h4><div><a href="0742b1c1-2ceb-e24b-1bea-b8e461055593.htm">TCX.Configuration Namespace</a></div></div></div><div id="InThisArticleColumn" class="column is-hidden-mobile"><nav class="menu sticky is-hidden"><p class="menu-label"><strong>In This Article</strong></p><ul id="InThisArticleMenu" class="menu-list"><li><a class="quickLink">Definition</a></li><li><a class="quickLink">Properties</a></li><li><a class="quickLink">Methods</a></li><li><a class="quickLink">Extension Methods</a></li><li><a class="quickLink">See Also</a></li></ul></nav></div></div></div></div><script>$(function(){
+SetDefaultLanguage("cs");
+LoadTocFile(null, null);
+InitializeQuickLinks();
+
+$(".toggleSection" ).click(function () {
+    SectionExpandCollapse(this);
+});
+
+$(".toggleSection").keypress(function () {
+    SectionExpandCollapseCheckKey(this, event)
+});
+hljs.highlightAll();
+});</script></body></html>
